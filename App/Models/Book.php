@@ -13,10 +13,11 @@ class Book extends \Core\Model
             $sql = <<<'SQL'
                 SELECT
                     tbook.nBookID AS book_id,
+                    tbook.cTitle AS title,
                     tauthor.cName AS author_first_name,
                     tauthor.cSurname AS author_last_name,
                     tpublishingcompany.cName AS publisher,
-                    took.nPublishingYear AS publishing_year
+                    tbook.nPublishingYear AS publishing_year
                 FROM tbook
                     INNER JOIN tauthor
                         ON tbook.nAuthorID = tauthor.nAuthorID
