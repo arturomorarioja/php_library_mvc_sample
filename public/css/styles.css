@@ -36,6 +36,17 @@ article.card {
     padding: 0 1rem;
 }
 
+.validation_error {
+    color: var(--colorError);
+}
+
+.message {
+    border: thin solid var(--colorDefault);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
 .button {
     border-radius: 6px;
     padding: 0.5rem 1rem;

@@ -3,6 +3,7 @@
 /**
  * Front controller
  */
+session_start();
 
 /**
  * It requires all class files instead of loading them one by one
@@ -36,6 +37,11 @@ $router->add('books', [
 $router->add('books/new', [
     'controller' => 'Books',
     'action'     => 'new'
+]);
+$router->add('books/create', [
+    'controller' => 'Books',
+    'action'     => 'create',
+    'method'     => 'POST'
 ]);
 
 /**
