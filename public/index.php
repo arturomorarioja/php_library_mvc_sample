@@ -43,9 +43,16 @@ $router->add('books/create', [
     'action'     => 'create',
     'method'     => 'POST'
 ]);
+$router->add('books/delete', [
+    'controller' => 'Books',
+    'action'     => 'delete',
+    'method'     => 'POST'
+]);
 
 /**
  * Route dispatch
  */
 $url = $_SERVER['QUERY_STRING'];
-$router->dispatch($url);
+$method = $_SERVER['REQUEST_METHOD'];
+
+$router->dispatch($url, $method);
