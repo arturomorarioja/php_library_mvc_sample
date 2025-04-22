@@ -1,4 +1,7 @@
 :root {
+    --colorDefault: black;
+    --colorButtonBackground: lightgrey;
+    --colorButtonHover: grey;
     --colorError: red;
 }
 
@@ -31,4 +34,16 @@ article.card {
     border: thick solid var(--colorError);
     border-radius: 1rem;
     padding: 0 1rem;
+}
+
+.button {
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    color: var(--colorDefault);
+    background-color: var(--colorButtonBackground);
+
+    &:hover {
+        background-color: var(--colorButtonHover);
+        text-decoration: none;
+    }
 }
