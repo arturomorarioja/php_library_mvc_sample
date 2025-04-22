@@ -60,4 +60,17 @@ class Books extends \Core\Controller
             header('Location: ' . \App\Config::BASE_URL . 'books');
         }
     }
+
+    /**
+     * Delete a book
+     */
+    public function deleteAction(): void
+    {
+        if (!Book::delete($_POST['book_id'])) {
+            $_SESSION['message'] = 'There was an error while deleting the book.';
+        } else {
+            $_SESSION['message'] = 'Book successfully deleted.';
+        }
+        header('Location: ' . \App\Config::BASE_URL . 'books');
+    }
 }

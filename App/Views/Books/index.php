@@ -25,6 +25,10 @@
                 </header>
                 <p><?=htmlspecialchars($book['publisher'] . 
                     ', ' . $book['publishing_year']) ?></p>
+                <form action="<?=\App\Config::BASE_URL ?>books/delete" method="POST">
+                    <input type="hidden" name="book_id" value="<?=$book['book_id'] ?>">
+                    <button type="submit">Delete</button>
+                </form>
             </article>
             <?php endforeach; ?>
         </section>
